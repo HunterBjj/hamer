@@ -1,17 +1,24 @@
 <div class="registration-cssave">
     <form>
         <h3 class="text-center">Вход</h3>
-        <div class="form-group">
-            <input class="form-control item" type="phone" name="phone" maxlength="15" minlength="6" pattern="^[0-9_.-]*$" id="phone" placeholder="Телефон" required>
+        <div>
+            <input type="phone" name="phone" maxlength="15" minlength="6" pattern="^[0-9_.-]*$" id="phone" placeholder="Телефон" required>
         </div>
         <br>
-        <div class="form-group">
-            <input class="form-control item"  name="password" maxlength="6" minlength="6" pattern="^[0-9_.-]*$" id="password" placeholder="Код пароль" required>
-        </div>
+
+            <input name="password" id="myInp" id="password" placeholder="Код пароль" readonly  required>
+
         <br>
-        <div class="form-group">
-            <button class="btn btn-primary btn-block create-account" type="submit">Вход в аккаунт</button>
+        <br>
+        <div>
+            <button class="btn btn-primary btn-block create-account" type="submit">Выслать код</button>
         </div>
     </form>
 </div>
 
+
+<script>
+function myFunction () {
+    return Math.floor (Math.random () * 100)
+document.getElementById("myInp").value = myFunction ()
+</script>

@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.user, name='user'),
-    path('', views.reg, name='auth'),
+    path('auth2.html/', views.reg, name='reg'),
 ]
