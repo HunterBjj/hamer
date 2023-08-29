@@ -1,13 +1,14 @@
 <div class="registration-cssave">
     <form>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
         <h3 class="text-center">Вход</h3>
         <div>
             <input type="phone" name="phone" maxlength="15" minlength="6" pattern="^[0-9_.-]*$" id="phone" placeholder="Телефон" required>
         </div>
         <br>
-
-            <input name="password" id="myInp" id="password" placeholder="Код пароль" readonly  required>
-
+          <input name="password"  type="text"  value="{{ random_num }}" placeholder="Код пароль" readonly  required>
         <br>
         <br>
         <div>
@@ -16,9 +17,3 @@
     </form>
 </div>
 
-
-<script>
-function myFunction () {
-    return Math.floor (Math.random () * 100)
-document.getElementById("myInp").value = myFunction ()
-</script>
