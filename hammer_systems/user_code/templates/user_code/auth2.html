@@ -1,8 +1,9 @@
 <div class="registration-cssave">
-    <form action="" method="post">
+    <form action="{% url 'create' %}" method="post"> {% csrf_token %}
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
       <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <h3 class="text-center">Вход</h3>
+        <br>
         <div>
             <input  name="phone" type="phone" value="{{ phone }}" placeholder="Телефон" readonly required>
         </div>
@@ -11,7 +12,7 @@
         <br>
         <br>
         <div>
-            <button type="submit">Войти </button>
+            <button type="submit"> Войти </button>
         </div>
     </form>
 </div>

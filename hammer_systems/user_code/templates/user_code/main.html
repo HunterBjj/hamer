@@ -1,2 +1,10 @@
 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-<table id="people">  </table>
+<form>
+    <table>  Пользователи </table>
+    {% for user in people %}
+    <tr>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.secret_code }}</td>
+    </tr>
+    {% endfor %}
+</form>

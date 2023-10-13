@@ -3,6 +3,7 @@
 <form method="post" action="{% url 'reg' %}"> {% csrf_token %}
     <h3 class="text-center">Вход</h3>
         <input type="phone" name="phone" maxlength="15" minlength="6" pattern="^[0-9_.-]*$" placeholder="Телефон">
+    <br>
     <style>
             .btn {
                 text-align: center
