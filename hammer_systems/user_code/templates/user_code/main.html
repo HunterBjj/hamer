@@ -1,10 +1,40 @@
+<head>
 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-<form action="{% url 'create' %}">
-    <table>  Пользователи </table>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+text-align: left;
+border-collapse: collapse;
+border-radius: 20px;
+box-shadow: 0 0 0 10px #F2906B;
+color: #452F21;
+}
+td {
+border-top: 10px solid #F2906B;
+padding: 8px;
+background: white;
+}
+table td:first-child {
+border-bottom-left-radius: 20px;
+}
+table td:last-child {
+border-bottom-right-radius: 20px;
+}
+  </style>
+</head>
+<form action="{% url 'create' %}"> {% csrf_token %}
+
+    <table>
+        <thead>
     {% for user in people %}
     <tr>
-        <td>{{ user.phone }}</td>
-        <td>{{ user.secret_code }}</td>
+        <td> Номер: {{ user.phone_number }}</td>
+        <td>  Инвайт-код: {{ user.secret_code }}</td>
     </tr>
     {% endfor %}
+        </tbody>
+    </table>
 </form>
+
